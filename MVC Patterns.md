@@ -11,7 +11,7 @@
 <p>항상 가능. 사용자에게 모델에 있는 것을 표현. 사용자로부터 정보를 받아 모델에 업데이트</p>
 <h2 id="controller---view">Controller -&gt; View</h2>
 <p>항상 가능. Outlet으로 연결.</p>
-<h2 id="model---view">Model - View</h2>
+<h2 id="model---view">Model -&gt; View</h2>
 <p>절대 소통 불가능. 모든 소통은 Controller를 통해 이루어짐.</p>
 <h2 id="view---controller">View -&gt; Controller</h2>
 <p>제한적으로 가능. 눈에 보이지 않고 구조화되어 있어야 함.</p>
