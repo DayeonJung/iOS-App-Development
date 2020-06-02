@@ -1,3 +1,7 @@
+---
+
+
+---
 
 <h1 id="mvc-patterns">MVC Patterns</h1>
 <p><strong>M</strong>odel - 알고리즘, 데이터, 데이터베이스, 실행하게 될 함수들<br>
