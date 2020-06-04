@@ -30,3 +30,84 @@ Model(테스트할 데이터를 입력)과 View Model로 Unit Test가 쉬워진�
 3.  Model은 ViewModel에 필요한 데이터를 응답.
 4.  ViewModel은 응답 받은 데이터를 가공해서 저장.
 5.  View는 ViewModel과의 Data Binding으로 인해 자동으로 갱신.
+
+
+
+
+ex) MVVMSample 
+```
+struct  Info {
+	let name: String
+	let age: Int
+}
+```
+1. ViewModel에 멤버변수를 생성하여 Model의 변수를 바인딩하도록 의존성 주입.
+
+```
+struct  InfoViewModel {
+	let name: String
+
+	init(info: Info) {
+		self.name = info.name
+	}
+}
+```
+
+
+2. ViewController에 뷰모델 멤버변수(CourseViewModel) 생성
+```
+class  ViewController: UIViewController {
+
+	var  infos = [InfoViewModel]()
+	
+}
+```
+
+3. 통신하면서 받아오는(어찌됐든 tableview cell에 전달할) 객체를  뷰모델  객체로  변환하여  바인딩
+
+```
+override  func  viewDidLoad() {
+	let infosArr = [Info(name: "나강남", age: 12), Info(name: "김일구", age: 67), Info(name: "차정원", age: 26)]
+	self.infos = infosArr.map({ return InfoViewModel(info: $0)})
+}
+```
+4. View(cell)에 ViewModel 타입의 멤버변수 생성한 후 didSet으로 Label.text 등과 같은 세팅하기
+**ViewModel 값으로 바인딩!!**
+
+```
+var  infoViewModel: InfoViewModel! {
+	didSet {
+		self.lbName.text = infoViewModel.name
+	}
+}
+```
+5. View Controller의 cellForRowAt에서 View(cell)의 ViewModel변수에 데이터 전달. 
+```
+cell.infoViewModel = self.infos[indexPath.row]
+```
+
+6. ViewModel에 Model의 멤버변수를 처리하여 ViewModel의 멤버변수로 저장하고, 실제 적용은 View에서 ViewModel값을 바인딩하여 사용한다.
+```
+struct InfoViewModel {
+	let name: String
+	let ageText: String //추가
+
+	init(info: Info) {
+		self.name = info.name
+		self.ageText = info.age >= 50 ? "50대 이상" : "50대 미만" //추가
+	}
+}
+```
+
+```
+class  InfoCell: UITableViewCell {
+
+	var  infoViewModel: InfoViewModel! {
+		didSet {
+			self.lbName.text = infoViewModel.name
+			self.lbAge.text = infoViewModel.ageText //추가
+		}
+	}
+}
+
+```
