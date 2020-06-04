@@ -12,10 +12,7 @@
 MVVM은 두가지 디자인 패턴을 사용. 
 **Command**패턴과 **Data Binding**.
 
-이 두가지 패턴으로 인해 View와 ViewModel은 의존성이 완전히 사라지게 된다.
-
-MVP와 마찬가지로 View에서 입력이 들어온다. 
-입력이 들어오면 Command 패턴을 통해 ViewModel에 명령을 내리게 되고 Data Binding으로 인해 ViewModel의 값이 변화하면 바로 View의 정보가 바뀐다.
+View에서 입력이 들어오면 Command 패턴을 통해 ViewModel에 명령을 내리게 되고 Data Binding으로 인해 ViewModel의 값이 변화하면 바로 View의 정보가 바뀐다.
 
 View 클래스가 Model 클래스를 인식하지 못하도록 해야 한다.
 View Model에서만 Model 클래스를 알고 있어야 한다. View와 View Model은 양방향 바인딩이 이루어진다.
