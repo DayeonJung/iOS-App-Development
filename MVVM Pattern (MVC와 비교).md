@@ -108,3 +108,6 @@ class  InfoCell: UITableViewCell {
 }
 
 ```
+
+**참고 )** [**https://www.youtube.com/watch?v=n06RE9A_8Ks**](https://www.youtube.com/watch?v=n06RE9A_8Ks)
+**-** Swift: How to Migrate MVC to MVVM & Intro Unit Testing
