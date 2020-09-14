@@ -8,9 +8,9 @@
 
 CSR파일은 Certificate를 생성하는데 필요한 파일입니다.
 
-![Certificates%20&%20Provisioning/_2020-07-06__11.32.24.png](Certificates%20&%20Provisioning/_2020-07-06__11.32.24.png)
+![Certificates%20&%20Provisioning%20Profiles/_2020-07-06__11.32.24.png](Certificates%20&%20Provisioning%20Profiles/_2020-07-06__11.32.24.png)
 
-![Certificates%20&%20Provisioning/_2020-07-06__11.32.47.png](Certificates%20&%20Provisioning/_2020-07-06__11.32.47.png)
+![Certificates%20&%20Provisioning%20Profiles/_2020-07-06__11.32.47.png](Certificates%20&%20Provisioning%20Profiles/_2020-07-06__11.32.47.png)
 
 사용자 이메일 주소에 애플 개발자로 등록되어 있는 계정을 입력하면 됩니다.(기본적으로는 기기에 로그인되어 있는 계정이 입력됩니다.)
 
