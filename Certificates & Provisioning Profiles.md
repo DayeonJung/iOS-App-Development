@@ -1,7 +1,5 @@
 # Certificates & Provisioning Profiles
 
-[https://www.notion.so/Certificates-Profiles-fd41bbe3b6d94d7991ebdcd30392ff6c](https://www.notion.so/Certificates-Profiles-fd41bbe3b6d94d7991ebdcd30392ff6c)
-
 1. 인증서 서명 요청(CSR 파일 생성)
 2. Certificate 생성
 3. Provisioning Profile 생성의 순서로 진행됩니다.
