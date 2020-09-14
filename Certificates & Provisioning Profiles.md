@@ -8,9 +8,9 @@
 
 CSR파일은 Certificate를 생성하는데 필요한 파일입니다.
 
-![Certificates%20&%20Provisioning%20Profiles%201a1f5a64bb4145faa38be88686dcde4a/_2020-07-06__11.32.24.png](Certificates%20&%20Provisioning%20Profiles%201a1f5a64bb4145faa38be88686dcde4a/_2020-07-06__11.32.24.png)
+![Certificates%20&%20Provisioning/_2020-07-06__11.32.24.png](Certificates%20&%20Provisioning/_2020-07-06__11.32.24.png)
 
-![Certificates%20&%20Provisioning%20Profiles%201a1f5a64bb4145faa38be88686dcde4a/_2020-07-06__11.32.47.png](Certificates%20&%20Provisioning%20Profiles%201a1f5a64bb4145faa38be88686dcde4a/_2020-07-06__11.32.47.png)
+![Certificates%20&%20Provisioning/_2020-07-06__11.32.47.png](Certificates%20&%20Provisioning/_2020-07-06__11.32.47.png)
 
 사용자 이메일 주소에 애플 개발자로 등록되어 있는 계정을 입력하면 됩니다.(기본적으로는 기기에 로그인되어 있는 계정이 입력됩니다.)
 
@@ -28,7 +28,7 @@ Certificate를 생성하는 것은 애플이 개발자를 신뢰하여 애플 �
 
 개발/배포하는 **기기**를 인증하는 것이기 때문에 기기별로 unique한 인증서가 생성됩니다. 예를 들어 글쓴이의 맥북프로로 두 개의 별개의 앱 프로젝트를 개발할 경우, 두 개의 인증서를 생성할 것 없이 한 개의 인증서만 생성하면 됩니다. (물론 development, distribution 두 가지 타입이 필요합니다.)
 
-![Certificates%20&%20Provisioning%20Profiles%201a1f5a64bb4145faa38be88686dcde4a/_2020-07-06__11.33.44.png](Certificates%20&%20Provisioning%20Profiles%201a1f5a64bb4145faa38be88686dcde4a/_2020-07-06__11.33.44.png)
+![Certificates%20&%20Provisioning%20Profiles/_2020-07-06__11.33.44.png](Certificates%20&%20Provisioning%20Profiles/_2020-07-06__11.33.44.png)
 
 Certificate를 generate한 후 download한 후 생성된 파일을 더블클릭하면 키체인 접근의 내 인증서에 .cer파일이 추가됩니다. 이 때 중요한 것은 **private key와 함께 쌍으로 존재해야 제대로 생성된 것**입니다. 만약 .cer파일만 생성이 된다면 위에서 만든 CRS파일과 제대로 연결되지 않은 것이므로 다시 생성하여 반드시 키쌍으로 존재하도록 만들어야 합니다.
 
@@ -36,7 +36,7 @@ Certificate를 generate한 후 download한 후 생성된 파일을 더블클릭�
 
 위에서 만든 Certificate와 iOS 개발 기기를 연결시켜 주는 것이 프로비저닝 프로파일 입니다. 프로비저닝 프로파일 또한 **개발용**, **배포용** 두가지 타입을 모두 생성해주어야 합니다. 앱을 개발하면서 Simulator가 아닌 실제 아이폰으로 테스트해 보고 싶을 때 반드시 세팅되어 있어야 합니다.
 
-![Certificates%20&%20Provisioning%20Profiles%201a1f5a64bb4145faa38be88686dcde4a/_2020-07-06__11.34.21.png](Certificates%20&%20Provisioning%20Profiles%201a1f5a64bb4145faa38be88686dcde4a/_2020-07-06__11.34.21.png)
+![Certificates%20&%20Provisioning%20Profiles/_2020-07-06__11.34.21.png](Certificates%20&%20Provisioning%20Profiles/_2020-07-06__11.34.21.png)
 
 위의 그림에서 보듯이 Provisioning Profile에는 App ID(앱 스토어에 등록될 Bundle ID), Certificate, Device(디바이스 고유정보) 세 가지 정보가 들어가게 됩니다.
 
@@ -46,7 +46,7 @@ Certificate를 generate한 후 download한 후 생성된 파일을 더블클릭�
 
 혹시 맞게 생성한 것 같은데 private key가 연결되어 있지 않다는 등의 에러메시지가 뜰 경우, Xcode를 종료한 후 재 실행해 확인해 보아야 합니다. Xcode 버그일 가능성이 있습니다.
 
-![Certificates%20&%20Provisioning%20Profiles%201a1f5a64bb4145faa38be88686dcde4a/_2020-07-06__11.34.51.png](Certificates%20&%20Provisioning%20Profiles%201a1f5a64bb4145faa38be88686dcde4a/_2020-07-06__11.34.51.png)
+![Certificates%20&%20Provisioning%20Profiles/_2020-07-06__11.34.51.png](Certificates%20&%20Provisioning%20Profiles/_2020-07-06__11.34.51.png)
 
 ### * 다른 앱 개발자가 같은 앱 프로젝트를 개발하려 할 때 전달해주어야 하는 것들은?
 
